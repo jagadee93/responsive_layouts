@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+</head>
+<style>
+    .box {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        display: grid;
+        place-content: center;
+        position: relative;
+    }
+</style>
+
+<body>
+    <main>
+        <div id='error'></div>
+
+        <form action="/" method="get">
+            <div>
+                <label>Name</label>
+                <input type="text" id="name" required minlength="10" />
+            </div>
+
+            <div>
+                <label> Password</label>
+                <input type="password" id="password" required minlength="6" />
+            </div>
+            <input type="submit" id="btn" />
+        </form>
+
+        <div id="result">textContent:</div>
+        <div id="result2">innerText:</div>
+        <div id="result3">InnerHtml</div>
+
+
+        <div class="box" id="box">
+            box
+        </div>
+
+    </main>
+</body>
+
+</html>

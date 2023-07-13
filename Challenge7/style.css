@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* reset css */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.f--roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.f--playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.container :is(h1) {
+  font-size: 60px;
+}
+
+.container :is(h2) {
+  font-size: 36px;
+}
+/* layout classes */
+
+.container {
+  width: 80%;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: #f3eed9;
+  color: #824936;
+  width: 100%;
+}
+
+header :is(.container) {
+  min-height: 660px;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+  letter-spacing: 1ch;
+  font-size: 1.125rem;
+  font-weight: 100;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-47 {
+  width: 47%;
+}
+.order-1 {
+  order: 2;
+}
+
+.row :is(p) {
+  font-size: 21px;
+}
+/* component classes */
+.p--b-1 {
+  padding-bottom: 1em;
+}
+
+.p-2 {
+  padding: 2rem 0;
+}
+
+.p-3 {
+  padding: 5rem 0;
+}
+
+.section-title {
+  color: #87629a;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+}
+
+.start {
+  align-self: flex-start;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+.bg-secondary {
+  background-color: #222c2a;
+  color: #f3eed9;
+}
+
+.bg-primary {
+  background-color: #824936;
+  color: #f3eed9;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .w-47 {
+    width: 100%;
+  }
+  .w-70 {
+    width: 100%;
+  }
+  img {
+    margin-bottom: 1em;
+  }
+}

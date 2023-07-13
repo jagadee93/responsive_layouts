@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.parent {
+  background-color: black;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.child {
+  background-color: aliceblue;
+  width: 50%;
+  height: 250px;
+}

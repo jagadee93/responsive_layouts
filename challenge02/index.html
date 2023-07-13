@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <a href="#one" onclick="changePage('one')" class="active">Solution</a>
+            <a href="#two" onclick="changePage('two')">Original</a>
+            <a href="#three" onclick="changePage('three')">Expected</a>
+
+        </nav>
+    </header>
+
+
+    <section class="page" id="one">
+        <span>kevin version</span>
+        <div class="hero">
+            <div class="container">
+                <div class="intro-content">
+                    <h1>Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur distinctio
+                        laudantium
+                        dolores. Nulla quibusdam reprehenderit eum sit minus aliquid!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>more content D:</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, mollitia adipisci magnam
+                voluptatibus
+                repellendus fuga ut repellat exercitationem eaque amet, omnis aliquam fugiat laudantium id dicta at?
+                Consectetur iure porro illum laudantium excepturi a laborum!</p>
+            <p>Sit magni soluta porro fugit placeat eius itaque, accusamus quisquam voluptates reiciendis pariatur,
+                vitae
+                molestiae. Minima, quos reprehenderit autem animi, nisi necessitatibus eligendi quis modi, facilis
+                ipsam
+                nihil odit quaerat! Nisi doloribus harum culpa ipsam!</p>
+            <p>Sint corporis animi repudiandae. Aliquid illum, tenetur magnam provident molestiae rem doloremque
+                aspernatur
+                quia reiciendis est facilis enim praesentium officia sequi qui debitis exercitationem quaerat hic
+                quos
+                recusandae. Architecto repudiandae aperiam tempora iste saepe error.</p>
+            <p>Provident aut suscipit aspernatur doloribus illum assumenda cupiditate perferendis dolores! Obcaecati
+                omnis
+                magnam ipsam voluptas ipsa eos explicabo quisquam architecto similique, sunt repellendus animi a
+                doloribus
+                ab deserunt. Dicta neque nostrum modi, illum debitis dolorem.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="page" id="two">
+        <span>My version</span>
+        <div class="container">
+            <div class="intro-content">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur distinctio
+                    laudantium
+                    dolores. Nulla quibusdam reprehenderit eum sit minus aliquid!</p>
+            </div>
+        </div>
+        <div class="container">
+            <h2>more content D:</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, mollitia adipisci magnam
+                voluptatibus
+                repellendus fuga ut repellat exercitationem eaque amet, omnis aliquam fugiat laudantium id dicta at?
+                Consectetur iure porro illum laudantium excepturi a laborum!</p>
+            <p>Sit magni soluta porro fugit placeat eius itaque, accusamus quisquam voluptates reiciendis pariatur,
+                vitae
+                molestiae. Minima, quos reprehenderit autem animi, nisi necessitatibus eligendi quis modi, facilis
+                ipsam
+                nihil odit quaerat! Nisi doloribus harum culpa ipsam!</p>
+            <p>Sint corporis animi repudiandae. Aliquid illum, tenetur magnam provident molestiae rem doloremque
+                aspernatur
+                quia reiciendis est facilis enim praesentium officia sequi qui debitis exercitationem quaerat hic
+                quos
+                recusandae. Architecto repudiandae aperiam tempora iste saepe error.</p>
+            <p>Provident aut suscipit aspernatur doloribus illum assumenda cupiditate perferendis dolores! Obcaecati
+                omnis
+                magnam ipsam voluptas ipsa eos explicabo quisquam architecto similique, sunt repellendus animi a
+                doloribus
+                ab deserunt. Dicta neque nostrum modi, illum debitis dolorem.</p>
+        </div>
+
+
+    </section>
+
+
+
+    <section class="page" id="three">
+        <h1>Expected Output</h1>
+        <img src="OP.png" alt="expected output image" />
+
+    </section>
+
+    <script>
+
+
+
+        function changePage(pageID) {
+
+
+            //removing all pages before setting the current page to display
+
+            const pageList = document.querySelectorAll('.page')
+            console.log(pageList)
+            pageList.forEach(page => {
+                page.style.display = 'none'
+            })
+
+
+            const Links = document.querySelectorAll('a')
+            Links.forEach(link => {
+                link.classList.remove('active')
+            })
+
+            //getting the current page and setting it to display
+            const page = document.getElementById(pageID)
+            //set the page to scroll smooth and also add smooth animation
+
+            page.scrollIntoView({
+                behavior: 'smooth'
+            })
+            page.style.display = 'block'
+
+
+            const link = document.querySelector(`a[href='#${pageID}']`)
+            link.classList.add('active')
+        }
+
+
+        changePage('one')
+    </script>
+</body>
+
+</html>
